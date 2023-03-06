@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Employment Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Employee Form</h1>
+    <form action="#" th:action="@{/employee}" th:object="${employee}" method="post">
+    	<p>First Name: <input type="text" th:field="*{firstName}" /></p>
+        <p>Last Name: <input type="text" th:field="*{lastName}" /></p>
+        <p>Date of Birth: <input type="date" th:field="*{dob}" /></p>
+        <p>PPSN: <input type="text" th:field="*{ppsn}" /></p>
+        <p>Gender: <input type="text" th:field="*{gender}" /></p>
+        <p>Department: <input type="text" th:field="*{department}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
